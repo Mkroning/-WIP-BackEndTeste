@@ -4,7 +4,7 @@ import cors from 'cors';
 import env from './env';
 
 import adminRoute from './src/routes/adminRoute';
-import usersRoute from './src/routes/usersRoute';
+import userRoute from './src/routes/userRoute';
 import naverRoute from './src/routes/naverRoute';
 import projectRoute from './src/routes/projectRoute';
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-app.use('/api', usersRoute);
+app.use('/api', userRoute);
 app.use('/api', adminRoute);
 app.use('/api', naverRoute);
 app.use('/api', projectRoute);

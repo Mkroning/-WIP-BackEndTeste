@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import env from '../../env';
-import jwt from 'jsonwevtoken';
+import jwt from 'jsonwebtoken';
 
 const saltRounds = 10;
 const salt = bcrypt.genSaltSync(saltRounds);
