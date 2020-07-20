@@ -10,7 +10,7 @@ import {
 } from '../helpers/validation';
 
 import {
-  errorMessage, sucessMessage, status,
+  errorMessage, successMessage, status,
 } from '../helpers/status';
 
 const createAdmin = async (req, res) => {
@@ -62,9 +62,9 @@ const createAdmin = async (req, res) => {
     const dbResponse = rows[0];
     delete dbResponse.password;
     const token = generateUserToken(dbResponse.email, dbResponse.id, dbResponse.is_admin, dbResponse.first_name, dbResponse.last_name);
-    sucessMessage.data = dbResponse;
-    sucessMessage.data.token = token;
-    return res.status(status.created).send(sucessMessage);
+    successMessage.data = dbResponse;
+    successMessage.data.token = token;
+    return res.status(status.created).send(successMessage);
   } catch (error) {
     if (error.routine === '_bt_check_unique') {
       errorMessage.error = 'Admin with that EMAIL already exist';

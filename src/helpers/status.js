@@ -1,5 +1,7 @@
-const sucessMessage = { status: 'success' };
+const successMessage = { status: 'success' };
+
 const errorMessage = { status: 'error' };
+
 const status = {
   success: 200,
   error: 500,
@@ -16,7 +18,7 @@ const trip_statuses = {
   cancelled: 2.00,
 }
 export {
-  sucessMessage,
+  successMessage,
   errorMessage,
   status,
   trip_statuses,

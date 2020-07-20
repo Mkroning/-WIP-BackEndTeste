@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create-dev-tables": "babel-node ./app/db/dev/dbConnection createAllTables",
+    "create-dev-tables": "babel-node ./src/database/dev/dbConnection createAllTables",
     "start": "nodemon --watch . --exec babel-node -- server",
     "setup": "npm-run-all -p start create-dev-tables"
   },
